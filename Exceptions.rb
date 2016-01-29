@@ -1,4 +1,3 @@
-=begin
 begin
 	file = open("/unexistant_file")
 	if file
@@ -67,7 +66,7 @@ else
 ensure
 	puts "Ensuring execution"
 end
-=end
+
 
 #using catch and throw
 
@@ -86,4 +85,5 @@ catch :quitRequested do
 	# process information
 end
 promptAndGet("Name:")
+
 
