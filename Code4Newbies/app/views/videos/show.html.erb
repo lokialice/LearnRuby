@@ -1,19 +1,15 @@
 <div class="card z-depth-3">
-	<div class="card-content white-text">	
-		<div class="col">
-			<div class="card-panel grey lighten-5 z-depth-1">
-				<p id="notice"><%= notice %></p>
-				<p>
-				  <strong>Wistia:</strong>
-				  <%= @video.wistia %>
-				</p>
-				<p>
-				  <strong>Description:</strong>
-				  <%= @video.description %>
-				</p>
-			<%= link_to 'Edit', edit_video_path(@video) %> |
-			<%= link_to 'Back', videos_path %>
+	<div class="card-content">	
+		<p id="notice"><%= notice %></p>
+		<div class="col m3">
+			<div class="collection">
+				<%= @videos.each do |video|%>
+					<%= link_to video.title,video, :class => 'collection-item' %>
+				<% end %>
 			</div>
 		</div>
+		<div class="col m9">
+			
+		</div>		
 	</div>
 </div>
